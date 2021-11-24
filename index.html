@@ -4,34 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-    <title>간단한 지도 표시하기</title>
+    <title>학원주소</title>
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=8vuh75yqtg"></script>
     <script src="./js/jquery.min.js"></script>
 </head>
 <body>
 <div id="map" style="width:100%;height:600px;"></div>
 <script>
-var cityhall = new naver.maps.LatLng(37.5666805, 126.9784147);
-
+var cityhall = new naver.maps.LatLng(35.8769358, 128.6254807);
+//37.5666805, 126.9784147
 var map = new naver.maps.Map('map', {
-    center: new naver.maps.LatLng(37.5698411, 126.9783927),
+    center: new naver.maps.LatLng(35.8800964, 128.6254587),
     zoom: 15
 });
+//37.5698411, 126.9783927
 
 var contentString = [
     '<div class="iw_inner">',
-    '   <h3>서울특별시청</h3>',
-    '   <p>서울특별시 중구 태평로1가 31 | 서울특별시 중구 세종대로 110 서울특별시청<br>',
-    '       <img src="./images/hi-seoul.jpg" width="55" height="55" alt="서울시청" class="thumb" /><br>',
-    '       02-120 | 공공,사회기관 > 특별,광역시청<br>',
-    '       <a href="http://www.seoul.go.kr" target="_blank">www.seoul.go.kr/</a>',
+    '   <h3>경북산업직업전문학교</h3>',
+    '   <p>대구광역시 동구 동부로 121 | 대구광역시 동구 신천동 68-1<br>',
+    '       <a href="http://www.kb.or.kr/" target="_blank">www.seoul.go.kr/</a>',
     '   </p>',
     '</div>'
 ].join('');
 
 var marker = new naver.maps.Marker({
     map: map,
-    position: cityhall
+    position: school
 });
 
 var infowindow = new naver.maps.InfoWindow({
